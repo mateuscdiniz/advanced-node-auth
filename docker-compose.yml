@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  backend:
+    env_file:
+        "./.env"
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: "mateuscdiniz/advanced-node-auth-backend"
+    ports:
+      - "5000:5000"
+  frontend:
+    build:
+      context: ./client
+      dockerfile: ./Dockerfile
+    image: "mateuscdiniz/advanced-node-auth-frontend"
+    ports:
+      - "3000:3000"
+    links:
+      - "backend:be"
