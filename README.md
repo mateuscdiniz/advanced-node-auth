@@ -14,9 +14,11 @@ Utilizei o NodeMailer para a recuperação de senhas, então terá que criar uma
 
 Configurar o arquivo .env de acordo com as instruções.
 
-# URL: 
+# URLs: 
 
-localhost:3000
+localhost:3000 (frontend)
+
+localhost:5000 (backend)
 
 # DOCKER
 
